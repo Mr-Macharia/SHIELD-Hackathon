@@ -18,10 +18,22 @@
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#education">Education</a></li>
+                <li><a href="#project">Project</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
+
+    <section id="hero">
+        <img src="Michella_img5.jpg" alt="MICHELLE JEPKORIR KARAN">
+        <h3>Web Developer</h3>
+        <p> I am the best in what I do. You can contact me for your Web Ddevelopment. 
+            My career is built on a solid foundation of practical knowledge in software engineering, product management, databases management, and web development.
+            My self-motivation and creativity empower me to find solutions to any problem I encounter. I firmly believe there is always a better way to do anything, and there is always value to be added.
+            My unique value proposition is diligent service: give me a task, and consider it perfectly done.</p>
+            <br>
+        <a href="#contact" class="cta-button">Contact Me</a>
+    </section>
 
     <section id="about">
         <h2>About Me</h2>
@@ -61,6 +73,21 @@
         </div>
          
     </section>
+
+
+    <section id="contact">
+        <h2 class="cta-button">Contact Me</h2>
+        <form action="submit-form" method="post">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required placeholder="your name is required, please">
+            <label for="email">Email</label>
+            <input type="text" id="name" name="name" required placeholder="your name is email, please">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required placeholder="please type in your message here"></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+    
     <script>
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
