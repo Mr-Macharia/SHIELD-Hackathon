@@ -32,45 +32,45 @@ Web Development Project - Portfolio Website (Part 2)
 Project Overview
 This part of the project involves the implementation of a responsive portfolio website with the following key features:
 
-Dark mode toggle
-Animated headline
-Smooth scrolling navigation
-Project showcase
-Skills and technology display
-Contact form
-Social media links
+Dark mode toggle.
+Animated headline.
+Smooth scrolling navigation.
+Project showcase.
+Skills and technology display.
+Contact form.
+Social media links.
 
 HTML Structure
 The index.html file defines the structure of the portfolio website:
-Header with navigation links and dark mode toggle
+Header with navigation links and dark mode toggle.
 Main sections:
-Headline with profile image and introduction
-Projects showcase
-About me section with skills
-Contact form
-Footer with social media links
+Headline with profile image and introduction.
+Projects showcase.
+About me section with skills.
+Contact form.
+Footer with social media links.
 
 CSS Styling
 The styles.css file contains the following key styling features:
-Responsive design using flexbox and grid layouts
-Custom color scheme with CSS variables for easy theming
-Dark mode styles
-Animated hover effects for projects and buttons
-Custom styling for form elements
-Social media icon styling with hover effects
+Responsive design using flexbox and grid layouts.
+Custom color scheme with CSS variables for easy theming.
+Dark mode styles.
+Animated hover effects for projects and buttons.
+Custom styling for form elements.
+Social media icon styling with hover effects.
 
 JavaScript Functionality
 The scripts.js file implements the following interactive features:
 Dark Mode Toggle:
-Switches between light and dark themes
-Saves user preference in local storage
+Switches between light and dark themes.
+Saves user preference in local storage.
 Animated Headline:
-Types out the headline text character by character
+Types out the headline text character by character.
 Smooth Scrolling:
-Implements smooth scrolling for navigation links
+Implements smooth scrolling for navigation links.
 Contact Form Handling:
-Prevents default form submission
-Displays a thank you message and resets the form
+Prevents default form submission.
+Displays a thank you message and resets the form.
 
 
 
