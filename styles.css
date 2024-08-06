@@ -1,31 +1,37 @@
 :root {
-    --white: #fff;
-    --gray: #7d7c84;
-    --blue: #1a2236;
+    /* 
+    Background, text, border, input background and dark background color 
+    */
+    --background: #fff;   
+    --text: #1a2236;
     --border: #98dede;
     --input: #dfdfe0;
+    --dark-background: #1a2236;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: var(--white);
-    color: var(--blue);
-    line-height: 1.6;
+    /* Set background color and text color */
+    background-color: var(--background); 
+    color: var(--text);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Font Styles */
 .playfair {
     font-family: 'Playfair Display', serif;
     font-weight: 400;
 }
 
+/* Poppins font family */
 .poppins {
+    margin-bottom: 20px;
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
 }
 
+/* Header Styles */
 header {
+    /* Display flex and justify content */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -33,22 +39,41 @@ header {
     background-color: var(--white);
     border-bottom: 1px solid #e5e5e5;
 }
+header {
+    background-color: var(--background);
+    border-bottom: 1px solid var(--border);
+}
 
+/* Makes the navigation list horizontal and removes default bullet points */
+.nav-link {
+    color: var(--text);
+}
+
+/* Styles buttons with  background and  text color*/
+.btnBlue {
+    background-color: var(--text);
+    color: var(--background);
+}
+
+/* Styles the logo's text color and font */
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
     color: var(--blue);
 }
 
+/* Makes the navigation list horizontal and removes default bullet points */
 nav ul {
     display: flex;
     list-style-type: none;
 }
 
+/* Adds spacing between navigation items */
 nav ul li {
     margin-left: 2rem;
 }
 
+/* Styles navigation links  font, blue text color, smooth transition effect on hover */
 .nav-link {
     text-decoration: none;
     color: var(--blue);
@@ -56,10 +81,12 @@ nav ul li {
     transition: color 0.3s ease;
 }
 
+/* Changes the color of navigation links on hover to gray */
 .nav-link:hover {
     color: var(--gray);
 }
 
+/* Styles the headline section for a flexible and responsive layout */
 #headline {
     display: flex;
     justify-content: space-between;
@@ -68,41 +95,50 @@ nav ul li {
     flex-wrap: wrap;
 }
 
+/* Ensures headline content takes up half the width */
 .headline-container {
     width: 50%;
 }
 
+/* Styles the main headline with a large font size and spacing below */
 .headline-title {
     font-size: 3rem;
     margin-bottom: 1rem;
 }
 
+
 .btnBlue {
-    display: inline-block;
-    padding: 0.8rem 1.5rem;
-    background-color: var(--blue);
-    color: var(--white);
-    text-decoration: none;
-    font-weight: 600;
-    transition: background-color 0.3s ease;
-}
+    background-color: #1a2236; /* blue background color */
+    color: #fff; /* white text color */
+    border: none; /* remove default border */
+    padding: 10px 20px; /* add some padding */
+    font-size: 16px; /* increase font size */
+    cursor: pointer; /* change cursor to pointer */
+    text-decoration: none; /* remove underline */
+    border-radius: 5px; /* add rounded corners */
+    transition: background-color 0.2s ease-in-out; /* add transition effect */
+  }
+  
+  .btnBlue:hover {
+    background-color: #0d95e8; /* change background color on hover */
+  }
 
-.btnBlue:hover {
-    background-color: var(--gray);
-}
-
+  /* Ensures profile image container takes up half the width */
 .profile-image-container {
     width: 50%;
 }
 
+/* Ensures profile image is responsive and fits within its container */
 .profile-image {
-    width: 100%;
+    width: 80%;
     height: auto;
     display: block;
     border: none;
+    margin-left: 150px;
 }
 
 #works, #about, #contact {
+    /* Adds padding to the works, about, and contact sections for spacing */
     padding: 4rem 2rem;
 }
 
@@ -113,30 +149,36 @@ nav ul li {
     margin-top: 2rem;
 }
 
+/* Styles individual tech cards with padding, white text, and rounded corners */
 .tech-card {
     padding: 2rem;
     color: var(--white);
     border-radius: 8px;
 }
 
+/* Different background colors for different categories of tech cards */
 .langs { background-color: #1c528a; }
 .frames { background-color: #e2505c; }
 .skills { background-color: #febf52; }
 
+/* Styles forms with a maximum width and centered alignment */
 form {
     max-width: 600px;
     margin: 2rem auto;
 }
 
+/* Adds spacing below each input container */
 .input-container {
     margin-bottom: 1rem;
 }
 
+/* Styles labels for better readability and spacing */
 label {
     display: block;
     margin-bottom: 0.5rem;
 }
 
+/* Styles inputs and textareas with padding, borders, and rounded corners */
 input, textarea {
     width: 100%;
     padding: 0.5rem;
@@ -144,6 +186,7 @@ input, textarea {
     border-radius: 4px;
 }
 
+/* Styles the footer  with consistent padding and color scheme */
 footer {
     background-color: var(--blue);
     color: var(--white);
@@ -158,6 +201,7 @@ footer {
     text-decoration: none;
 }
 
+/* Media query for responsive design, adjusting layouts for smaller screens */
 @media (max-width: 768px) {
     #headline {
         flex-direction: column;
@@ -173,6 +217,7 @@ footer {
     }
 }
 
+/* Styles the projects grid with CSS Grid for a flexible layout */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -180,6 +225,7 @@ footer {
     margin-top: 2rem;
 }
 
+/* Styles individual projects with relative positioning, rounded corners, and a shadow */
 .project {
     position: relative;
     overflow: hidden;
@@ -187,6 +233,7 @@ footer {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Ensures project images are responsive with a hover effect */
 .project-image {
     width: 100%;
     height: auto;
@@ -195,9 +242,11 @@ footer {
 }
 
 .project:hover .project-image {
+    /* Adds a scaling effect to project images on hover */
     transform: scale(1.05);
 }
 
+/* Styles project descriptions with a slide-up effect on hover */
 .project-description {
     position: absolute;
     bottom: 0;
@@ -214,11 +263,13 @@ footer {
     transform: translateY(0);
 }
 
+/* Styles the project title with spacing below */
 .project-title {
     margin: 0 0 0.5rem;
     font-size: 1.2rem;
 }
 
+/* Styles the tech-container list in projects with flexbox */
 .tech-container {
     display: flex;
     list-style: none;
@@ -226,6 +277,7 @@ footer {
     margin: 0 0 1rem;
 }
 
+/* Styles individual tech items with background color, padding, and rounded corners */
 .tech-item {
     background-color: var(--border);
     color: var (--blue);
@@ -236,12 +288,17 @@ footer {
 }
 
 .seeProjBtn {
+    /* Styles the seeProjBtn class button with padding and font size */
     font-size: 0.9rem;
     padding: 0.5rem 1rem;
 }
+
+/* Ensures the profile image container has a maximum width */
 .profile-image-container{
     max-width: 500px;
 }
+
+/* Imports the Poppins font from Google Fonts */
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 *{
   margin: 0;
@@ -249,6 +306,8 @@ footer {
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+
+/* Centers the content within the HTML and body tags, with a gradient background */
 html,body{
   display: grid;
   height: 100%;
@@ -256,10 +315,95 @@ html,body{
   place-items: center;
   background: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
 }
+
+/* Styles the icon spans with size, border radius, and transition on hover */
+.wrapper .icon span {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.wrapper .icon:hover span {
+    transform: scale(1.1);
+}
+
+/* Styles the tooltip with padding, border radius, and a transition for a smooth appearance */
+.wrapper .icon .tooltip {
+    position: absolute;
+    top: -35px;
+    background: #fff;
+    color: #333;
+    padding: 5px 10px;
+    border-radius: 5px;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Shows the tooltip when the icon is hovered */
+.wrapper .icon:hover .tooltip {
+    top: -45px;
+    opacity: 1;
+}
+
+/* Sets the official  background color for  Facebook,instagram,twitter and github icon  and
+the text color to white */
+.wrapper .facebook span {
+    background: #3B5999;
+    color: #fff;
+}
+
+
+.wrapper .twitter span {
+    background: #1DA1F2;
+    color: #fff;
+}
+
+.wrapper .instagram span {
+    background: #E4405F;
+    color: #fff;
+}
+
+.wrapper .github span {
+    background: #333;
+    color: #fff;
+}
+
+.wrapper .icon a {
+    /* Ensures links within icons inherit the color and have no text decoration */
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Changes the background color of each social media icon span on hover  */
+.wrapper .icon.facebook a span:hover {
+    background-color: #2d4373;
+}
+
+.wrapper .icon.twitter a span:hover {
+    background-color: #0d95e8;
+}
+
+.wrapper .icon.instagram a span:hover {
+    background-color: #c13584;
+}
+
+.wrapper .icon.github a span:hover {
+    background-color: #24292e;
+}
+
 .wrapper{
+    /* Uses inline-flex to align icons horizontally */
   display: inline-flex;
 }
 .wrapper .icon{
+    /* Styles each icon with margin, center alignment, flexbox properties, and a smooth transition */
   margin: 0 20px;
   text-align: center;
   cursor: pointer;
@@ -271,6 +415,8 @@ html,body{
   z-index: 2;
   transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
+
+/* Styles the span within each icon to be circular with a shadow and transition effect */
 .wrapper .icon span{
   display: block;
   height: 60px;
@@ -282,10 +428,13 @@ html,body{
   box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
   transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
+
+/* Styles the icon inside the span for proper alignment and size */
 .wrapper .icon span i{
   line-height: 60px;
   font-size: 25px;
 }
+/* Styles t with padding, border radius, and a transition for a smooth appearance */
 .wrapper .icon .tooltip{
   position: absolute;
   top: 0;
@@ -301,11 +450,14 @@ html,body{
   box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
   transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
+
+/* Shows the tooltip when the icon is hovered */
 .wrapper .icon:hover .tooltip{
   top: -70px;
   opacity: 1;
   pointer-events: auto;
 }
+/* Styles the arrow below the tooltip */
 .icon .tooltip:before{
   position: absolute;
   content: "";
@@ -318,12 +470,14 @@ html,body{
   transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 .wrapper .icon:hover span{
+
   color: #fff;
 }
 .wrapper .icon:hover span,
 .wrapper .icon:hover .tooltip{
   text-shadow: 0px -1px 0px rgba(0,0,0,0.4);
 }
+/* Changes the background color for  icons and tooltip on hover */
 .wrapper .facebook:hover span,
 .wrapper .facebook:hover .tooltip,
 .wrapper .facebook:hover .tooltip:before{
@@ -348,4 +502,195 @@ html,body{
 .wrapper .youtube:hover .tooltip,
 .wrapper .youtube:hover .tooltip:before{
   background: #DE463B;
+}
+
+/* Sets CSS variables for dark mode class on clicking toggle button */
+body.dark-mode {
+    --background: var(--dark-background);
+    --text: #ecf0f1;
+}
+
+header.dark-mode,
+footer.dark-mode {
+    background-color: #333;
+}
+
+nav ul li a.dark-mode {
+    color: #e5e5e5;
+}
+
+.btnBlue.dark-mode {
+    background-color: #444;
+    color: #e5e5e5;
+}
+
+.btnBlue.dark-mode:hover {
+    background-color: #666;
+}
+#darkModeToggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-color: #1a2236;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#darkModeToggle:hover {
+    background-color: #98dede;
+    color: #1a2236;
+}
+
+body.dark-mode #darkModeToggle {
+    background-color: #98dede;
+    color: #1a2236;
+}
+
+body.dark-mode #darkModeToggle:hover {
+    background-color: #fff;
+}
+
+
+body.dark-mode header {
+    background-color: var(--background);
+    border-bottom: 1px solid var(--border);
+}
+
+body.dark-mode .nav-link {
+    color: var(--text);
+}
+
+body.dark-mode .nav-link:hover {
+    color: #98dede;
+}
+
+body.dark-mode .btnBlue {
+    background-color: var(--text);
+    color: var(--background);
+}
+
+body.dark-mode .btnBlue:hover {
+    background-color: #7d7c84;
+}
+
+body.dark-mode .project-description {
+    background-color: rgba(236, 240, 241, 0.9);
+    color: #1a2236;
+}
+
+body.dark-mode footer {
+    background-color: #2c3e50;
+}
+
+body.dark-mode .open {
+    color: #98dede;
+}
+
+body.dark-mode input, 
+body.dark-mode textarea {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    border: 1px solid #34495e;
+}
+
+body.dark-mode .tech-card {
+    background-color: #2c3e50;
+}
+
+body.dark-mode .tech-item {
+    background-color: #34495e;
+    color: #ecf0f1;
+}
+/* Add these styles to your existing CSS */
+
+body {
+    background-color: var(--white);
+    color: var(--blue);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+/* Update other dark mode styles as needed */
+body.dark-mode header {
+    background-color: var(--background);
+    border-bottom: 1px solid var(--border);
+}
+
+body.dark-mode .nav-link {
+    color: var(--text);
+}
+
+body.dark-mode .nav-link:hover {
+    color: #98dede;
+}
+
+body.dark-mode .btnBlue {
+    background-color: var(--border);
+    color: var(--background);
+}
+
+body.dark-mode .btnBlue:hover {
+    background-color: #7d7c84;
+}
+
+body.dark-mode .project-description {
+    background-color: rgba(236, 240, 241, 0.9);
+    color: #1a2236;
+}
+
+body.dark-mode footer {
+    background-color: #2c3e50;
+}
+
+body.dark-mode .open {
+    color: #98dede;
+}
+
+body.dark-mode input, 
+body.dark-mode textarea {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    border: 1px solid #34495e;
+}
+
+body.dark-mode .tech-card {
+    background-color: #2c3e50;
+}
+
+body.dark-mode .tech-item {
+    background-color: #34495e;
+    color: #ecf0f1;
+}
+
+#darkModeToggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-color: #1a2236;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#darkModeToggle:hover {
+    background-color: #98dede;
+    color: #1a2236;
+}
+
+body.dark-mode #darkModeToggle {
+    background-color: #98dede;
+    color: #1a2236;
+}
+
+body.dark-mode #darkModeToggle:hover {
+    background-color: #fff;
 }
